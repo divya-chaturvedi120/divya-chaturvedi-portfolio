@@ -3,9 +3,12 @@
     margin: 0;
     padding-top: 10px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(27, 155, 206);
+    background-color: hsl(204.39deg 79.02% 36.76%);
     color: white;
     
+}
+html{
+    scroll-behavior: smooth;
 }
 /* Navigation bar container */
 .nav-container{
@@ -17,15 +20,69 @@
 }
 /* Styling for the name (logo/text) */
 .name{
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 2.5em;
+    font-weight: bolder;
+    margin-left: 50px;
+    
 }
+.name a{
+    text-decoration: none;
+    
+}
+
 /* Styling for navigation links */
 .nav-bar a{
     text-decoration: none;
     font-size: 1.2em;
     margin: 0 10px;
-
+}
+.nav-bar a:hover{
+    color: #FFD700;
+}
+.introduction{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 40px;
  
+}
+/* Styling for profile image */
+.image img{
+    margin-left: 20%;
+    margin-top: 20px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 4px  4px  10px skyblue;   
+}
+.image img:hover{
+    transform: scale(1.1);
+}
+/* Short Intro Styling */
+.short-intro {
+    font-size: 1.5em;
+    max-width: 650px;
+    text-align: left;
+}
+.short-intro span {
+    font-weight: bold;
+    color: #FFD700; 
+}
+/* ======== Mobile Responsive Design ======== */
+@media screen and (max-width: 768px) {
+    .introduction {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        gap: 20px;
+        padding: 30px;
+    }
 
+    .image img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .short-intro {
+        font-size: 1.2em;
+        max-width: 90%;
+    }
 }
