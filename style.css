@@ -1,0 +1,31 @@
+/* Reset default margin and padding, and set global styles */
+*{
+    margin: 0;
+    padding-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(27, 155, 206);
+    color: white;
+    
+}
+/* Navigation bar container */
+.nav-container{
+  
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Styling for the name (logo/text) */
+.name{
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Styling for navigation links */
+.nav-bar a{
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0 10px;
+
+ 
+
+}
