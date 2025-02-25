@@ -5,42 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <!-- Font Awesome CDN Link -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body> 
 
     <!-- Navigation Container -->
     <div class="nav-container">
-        
-        <!-- Name/Logo Section -->
         <div class="name">
-            <a href="index.html">Divya Chaturvedi</a>
- 
+            <a href="#home">Divya Chaturvedi</a>
         </div>
-           
-        <!-- Navigation Links -->
         <div class="nav-bar">
-             <a href="about.html">About</a> 
-             <a href="education.html">Education</a> 
-             <a href="projects.html">Projects</a> 
-             <a href="Experience.html">Experience</a> 
-             <a href="contact.html">Contact</a> 
-             <a href="divyachatrvedi120@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-             <a href="https://www.linkedin.com/in/divyachaturvedi02/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="mailto:divyachatrvedi120@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/divyachaturvedi02/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
-         <!-- Introduction Section -->  
-<div class="introduction">
+
+    <!-- Introduction Section -->
+    <div id="home" class="introduction">
         <!-- Profile Image -->
-    <div class="image">
-        <img src="Images/profile.jpg" alt="Profile">
-    </div>
-         <!-- Short Intro -->
-     <div class="short-intro">
-        <p>Hey there! <span>I'm Divya Chaturvedi</span>, a creative Frontend Developer who loves bringing ideas to life with clean and user-friendly designs.</p>
+        <div class="image">
+            <img src="Images/profile.jpg" alt="Profile">
+        </div>
+        <!-- Short Intro -->
+        <div class="short-intro">
+            <p>Hey there! <span>I'm Divya Chaturvedi</span>, a creative Frontend Developer who loves bringing ideas to life with clean and user-friendly designs.</p>
             <p>Let's build something amazing together! </p>
-     </div>
+        </div>
+    </div>
+
+    <!-- About Me Section -->
+    <!-- About Me Section -->
+<div id="about" class="about-section">
+    <h1>About Me</h1>
+    <p>
+        Hi! I'm Divya Chaturvedi, a passionate Frontend Developer who loves crafting beautiful, responsive, and user-friendly websites. 
+        I enjoy transforming ideas into reality using HTML, CSS, and JavaScript. Currently, I'm pursuing my Master's in Computer Applications (MCA) 
+        with a specialization in Artificial Intelligence and Machine Learning at RCOEM, Nagpur.
+    </p>
+    <p>
+        I have a strong foundation in web development, and my projects include a fully responsive 
+        <a href="https://mynstyle.netlify.app/" target="_blank">Myntra Clone</a> and my 
+        <a href="https://divyachaturvedi.netlify.app/" target="_blank">Portfolio Website</a>. I love exploring new technologies, building exciting projects, and continuously improving my skills.
+    </p>
+    <p>
+        Along with web development, I’m also sharpening my problem-solving abilities by practicing Data Structures and Algorithms (DSA). 
+        My goal is to keep growing, learning, and contributing to meaningful projects while enjoying the journey of becoming a well-rounded developer.
+    </p>
 </div>
+
+
+    <!-- Education Section -->
+    <div id="education" class="education-section">
+        <h1>My Education</h1>
+    
+        <div class="education-information">
+            <h2>MCA - RCOEM, Nagpur</h2>
+            <p>Specialization: AI & ML | 2024 - Present</p>
+            <p>Currently pursuing Master's in Computer Applications with a focus on AI and Machine Learning.</p>
+            <p><strong>Current CGPA:</strong> 9.1</p>
+        </div>
+    
+        <div class="education-information">
+            <h2>BCA - St. Francis De Sales College, Nagpur</h2>
+            <p>RTMNU University | 2020 - 2023</p>
+            <p>Graduated with a Bachelor's degree in Computer Applications, building a strong foundation in programming and development.</p>
+            <p><strong>Percentage:</strong> 73.37%</p>
+        </div>
+    </div>
+    
+
+    <!-- Projects Section -->
+    <div class="projects-section" id="projects">
+        <h1>My Projects</h1>
+        <div class="projects-container">
+            <div class="projects-information">
+                <!-- Myntra Clone -->
+                <img src="myntra-clone.png" alt="myntra-clone">
+                <h2>Myntra Clone</h2>
+                <p>A fully responsive Myntra website clone built using HTML and CSS.</p>
+                <a href="https://mynstyle.netlify.app/" target="_blank">View Project</a>
+            </div>
+
+            <!-- Portfolio Website -->
+            <div class="projects-information">
+                <img src="portfolio.png" alt="Portfolio Website">
+                <h2>Portfolio Website</h2>
+                <p>My personal portfolio website showcasing my projects and skills.</p>
+                <a href="https://divyachaturvedi.netlify.app/" target="_blank">View Project</a>
+            </div>
+        </div>
+    </div>
+<!-- Contact Section -->
+<div id="contact" class="contact-section">
+    <h1>Contact Me</h1>
+    <p>Have a question or want to work together? Feel free to reach out!</p>
+    
+    <form class="contact-form" action="https://formspree.io/f/xqaevnbz" method="POST">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Your Email">
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</div>
+      <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Let's Connect!</h2>
+        <p>Made with ❤️ by Divya Chaturvedi</p>
+        <div class="footer-links">
+            <a href="mailto:divyachatrvedi120@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/divyachaturvedi02/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/divya-chaturvedi120" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Divya Chaturvedi. All rights reserved.</p>
+    </div>
+            
+</footer> 
 </body>
 </html>
