@@ -194,22 +194,21 @@ html {
   }
 }
 
-/* Skills Section */
 .skills-section {
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #0d1b2a, #1b263b);
-  border-radius: 15px;
-  margin: 30px auto;
-  width: 90%;
+  padding: 40px 20px;
+  background-color: #0d1b2a;
+  border-radius: 10px;
   max-width: 1000px;
-  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.15);
+  margin: 30px auto;
+  color: #e0e1dd;
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
 }
 
 .skills-section h1 {
-  font-size: 2.5em;
-  color: #00b4d8;
+  font-size: 2em;
   text-align: center;
-  margin-bottom: 40px;
+  color: #00b4d8;
+  margin-bottom: 30px;
 }
 
 .skills-category {
@@ -217,40 +216,111 @@ html {
 }
 
 .skills-category h2 {
-  color: #90e0ef;
-  text-align: left;
-  margin-bottom: 15px;
+  color: #00b4d8;
   font-size: 1.4em;
+  margin-bottom: 15px;
+  padding-left: 10px;
 }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  justify-items: center;
+  align-items: center;
 }
 
 .skill {
+  background-color: #1b263b;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80px;
-  text-align: center;
-  color: #e0e1dd;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100px;
 }
 
 .skill i {
-  font-size: 40px;
+  font-size: 2em;
   margin-bottom: 8px;
+  transition: transform 0.3s;
 }
+
+/* Colorful Icons */
+.skill .fa-html5 { color: #e34f26; }
+.skill .fa-css3-alt { color: #1572b6; }
+.skill .fa-js { color: #f7df1e; }
+.skill .fa-react { color: #61dafb; }
+.skill .fa-node-js { color: #68a063; }
+.skill .fa-server { color: #8e8e8e; }
+.skill .fa-database:nth-of-type(1) { color: #4db33d; } /* MongoDB */
+.skill .fa-database:nth-of-type(2) { color: #00618a; } /* SQL */
+.skill .fa-python { color: #3776ab; }
+.skill .fa-code:nth-of-type(1) { color: #00599c; } /* C++ */
+.skill .fa-sitemap { color: #ff5722; }
+.skill .fa-memory { color: #ff9800; }
+.skill .fa-project-diagram { color: #9c27b0; }
+.skill .fa-network-wired { color: #03a9f4; }
+.skill .fa-git-alt { color: #f05032; }
+.skill .fa-github { color: #181717; }
+.skill .fa-cloud { color: #00c7b7; }
+.skill .fa-code:nth-of-type(2) { color: #007acc; } /* VS Code */
 
 .skill span {
   font-size: 0.9em;
+  word-wrap: break-word;
+  color: #e0e1dd;
 }
 
 .skill:hover {
-  transform: scale(1.15);
-  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.5);
+}
+
+.skill:hover i {
+  transform: scale(1.2);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .skill {
+    width: 80px;
+    padding: 10px;
+  }
+
+  .skill i {
+    font-size: 1.6em;
+  }
+
+  .skill span {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 12px;
+  }
+
+  .skill {
+    width: 70px;
+    padding: 8px;
+  }
+
+  .skill i {
+    font-size: 1.4em;
+  }
+
+  .skill span {
+    font-size: 0.75em;
+  }
 }
 
 /* Profiles Section */
@@ -552,3 +622,4 @@ textarea {
     font-size: 18px;
   }
 }
+
