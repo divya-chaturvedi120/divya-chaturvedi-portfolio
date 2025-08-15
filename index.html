@@ -1,142 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <!-- Font Awesome CDN Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body> 
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Navigation Container -->
     <div class="nav-container">
-        <div class="name">
-            <a href="#home">Divya Chaturvedi</a>
-        </div>
-        <div class="nav-bar">
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="mailto:divyachatrvedi120@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/divyachaturvedi02/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
+      <div class="name">
+        <a href="#home">Divya Chaturvedi</a>
+      </div>
+      <div class="nav-bar">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
 
     <!-- Introduction Section -->
     <div id="home" class="introduction">
-        <!-- Profile Image -->
-        <div class="image">
-            <img src="Images/profile.jpg" alt="Profile">
-        </div>
-        <!-- Short Intro -->
-        <div class="short-intro">
-            <p>Hey there! <span>I'm Divya Chaturvedi</span>, a creative Frontend Developer who loves bringing ideas to life with clean and user-friendly designs.</p>
-            <p>Let's build something amazing together! </p>
-        </div>
+      <!-- Profile Image -->
+      <div class="image">
+        <img src="Images/profile.jpg" alt="Profile" />
+      </div>
+
+      <!-- Short Intro -->
+      <div class="short-intro">
+        <h1
+          style="
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin: 0;
+          "
+        >
+          <span id="typing" style="color: #00b4d8"></span>
+        </h1>
+        <p>
+          A creative Frontend Developer who loves bringing ideas to life with
+          clean and user-friendly designs.
+        </p>
+      </div>
     </div>
 
-    <!-- About Me Section -->
-    <!-- About Me Section -->
-<div id="about" class="about-section">
-    <h1>About Me</h1>
-    <p>
-        Hi! I'm Divya Chaturvedi, a passionate Frontend Developer who loves crafting beautiful, responsive, and user-friendly websites. 
-        I enjoy transforming ideas into reality using HTML, CSS, and JavaScript. Currently, I'm pursuing my Master's in Computer Applications (MCA) 
-        with a specialization in Artificial Intelligence and Machine Learning at RCOEM, Nagpur.
-    </p>
-    <p>
-        I have a strong foundation in web development, and my projects include a fully responsive 
-        <a href="https://mynstyle.netlify.app/" target="_blank">Myntra Clone</a> and my 
-        <a href="https://divyachaturvedi.netlify.app/" target="_blank">Portfolio Website</a>. I love exploring new technologies, building exciting projects, and continuously improving my skills.
-    </p>
-    <p>
-        Along with web development, I’m also sharpening my problem-solving abilities by practicing Data Structures and Algorithms (DSA). 
-        My goal is to keep growing, learning, and contributing to meaningful projects while enjoying the journey of becoming a well-rounded developer.
-    </p>
-</div>
+    <script>
+      const words = ["Hello, I'm Divya"];
+      let i = 0,
+        j = 0,
+        currentWord = "",
+        isDeleting = false;
 
+      function type() {
+        currentWord = words[i];
+        document.getElementById("typing").textContent =
+          currentWord.substring(0, j) + (j % 2 ? "|" : "");
+
+        if (!isDeleting && j < currentWord.length) {
+          j++;
+          setTimeout(type, 100);
+        } else if (isDeleting && j > 0) {
+          j--;
+          setTimeout(type, 60);
+        } else {
+          isDeleting = !isDeleting;
+          if (!isDeleting) i = (i + 1) % words.length;
+          setTimeout(type, 1000);
+        }
+      }
+      type();
+    </script>
+
+    <!-- About Me Section -->
+    <div id="about" class="about-section">
+      <h1>About Me</h1>
+      <p>
+        Learning the MERN stack, strengthening problem-solving through DSA, and
+        pursuing MCA in AI & Machine Learning at RCOEM, Nagpur.
+      </p>
+    </div>
 
     <!-- Education Section -->
     <div id="education" class="education-section">
-        <h1>My Education</h1>
-    
-        <div class="education-information">
-            <h2>MCA - RCOEM, Nagpur</h2>
-            <p>Specialization: AI & ML | 2024 - Present</p>
-            <p>Currently pursuing Master's in Computer Applications with a focus on AI and Machine Learning.</p>
-            <p><strong>Current CGPA:</strong> 9.1</p>
-        </div>
-    
-        <div class="education-information">
-            <h2>BCA - St. Francis De Sales College, Nagpur</h2>
-            <p>RTMNU University | 2020 - 2023</p>
-            <p>Graduated with a Bachelor's degree in Computer Applications, building a strong foundation in programming and development.</p>
-            <p><strong>Percentage:</strong> 73.37%</p>
-        </div>
+      <h1>Education</h1>
+
+      <div class="education-information">
+        <h2>MCA — RCOEM, Nagpur</h2>
+        <p>
+          <strong>Specialization:</strong> AI & Machine Learning |
+          <em>2024 – Present</em>
+        </p>
+        <p>
+          Pursuing a Master's in Computer Applications, focusing on Artificial
+          Intelligence and Machine Learning.
+        </p>
+        <p><strong>Current CGPA:</strong> 8.98</p>
+      </div>
+
+      <div class="education-information">
+        <h2>BCA — St. Francis De Sales College, Nagpur</h2>
+        <p>
+          <strong>Affiliated to:</strong> RTMNU University |
+          <em>2020 – 2023</em>
+        </p>
+        <p>
+          Completed Bachelor's in Computer Applications with a strong foundation
+          in programming and development.
+        </p>
+        <p><strong>Percentage:</strong> 73.37%</p>
+      </div>
     </div>
-    
+
+    <!-- Skills Section -->
+    <div id="skills" class="skills-section">
+      <h1>My Skills</h1>
+
+      <!-- Frontend -->
+      <div class="skills-category">
+        <h2>Frontend</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <i class="fab fa-html5" style="color: #e34f26"></i
+            ><span>HTML5</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-css3-alt" style="color: #1572b6"></i
+            ><span>CSS3</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-js" style="color: #f7df1e"></i
+            ><span>JavaScript</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-react" style="color: #61dafb"></i
+            ><span>React</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="skills-category">
+        <h2>Backend</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <i class="fab fa-node-js" style="color: #68a063"></i
+            ><span>Node.js</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-server" style="color: #888"></i
+            ><span>Express.js</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database" style="color: #4db33d"></i
+            ><span>MongoDB</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database" style="color: #00618a"></i
+            ><span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="skills-category">
+        <h2>Programming Languages</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <i class="fas fa-code" style="color: #00599c"></i><span>C++</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-python" style="color: #3776ab"></i
+            ><span>Python</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-js" style="color: #f7df1e"></i
+            ><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS Fundamentals -->
+      <div class="skills-category">
+        <h2>CS Fundamentals</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <i class="fas fa-sitemap" style="color: #ff5722"></i
+            ><span>DSA</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-memory" style="color: #ff9800"></i
+            ><span>Operating System</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-project-diagram" style="color: #9c27b0"></i
+            ><span>OOP</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-network-wired" style="color: #03a9f4"></i
+            ><span>Computer Networks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms -->
+      <div class="skills-category">
+        <h2>Tools & Platforms</h2>
+        <div class="skills-container">
+          <div class="skill">
+            <i class="fab fa-git-alt" style="color: #f05032"></i
+            ><span>Git</span>
+          </div>
+          <div class="skill">
+            <i class="fab fa-github" style="color: #181717"></i
+            ><span>GitHub</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-cloud" style="color: #00c7b7"></i
+            ><span>Netlify</span>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code" style="color: #007acc"></i
+            ><span>VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coding Profiles Section -->
+    <div id="profiles" class="profiles-section">
+      <h1>Find Me On</h1>
+      <div class="profiles-container">
+        <a
+          href="https://leetcode.com/yourusername"
+          target="_blank"
+          class="profile-card"
+        >
+          <i class="fas fa-code"></i>
+          <span>LeetCode</span>
+        </a>
+        <a
+          href="https://auth.geeksforgeeks.org/user/yourusername"
+          target="_blank"
+          class="profile-card"
+        >
+          <i class="fas fa-laptop-code"></i>
+          <span>GeeksforGeeks</span>
+        </a>
+        <a
+          href="https://www.codolio.com/profile/yourusername"
+          target="_blank"
+          class="profile-card"
+        >
+          <i class="fas fa-terminal"></i>
+          <span>Codolio</span>
+        </a>
+        <a
+          href="https://github.com/yourusername"
+          target="_blank"
+          class="profile-card"
+        >
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/yourusername/"
+          target="_blank"
+          class="profile-card"
+        >
+          <i class="fab fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+      </div>
+    </div>
 
     <!-- Projects Section -->
     <div class="projects-section" id="projects">
-        <h1>My Projects</h1>
-        <div class="projects-container">
-            <div class="projects-information">
-                <!-- Myntra Clone -->
-                <img src="Images/myntra-clone.png" alt="myntra-clone">
-                <h2>Myntra Clone</h2>
-                <p>A fully responsive Myntra website clone built using HTML and CSS.</p>
-                <a href="https://mynstyle.netlify.app/" target="_blank">View Project</a>
-            </div>
-
-            <!-- Portfolio Website -->
-            <div class="projects-information">
-                <img src="Images/portfolio.png" alt="Portfolio Website">
-                <h2>Portfolio Website</h2>
-                <p>My personal portfolio website showcasing my projects and skills.</p>
-                <a href="https://divyachaturvedi.netlify.app/" target="_blank">View Project</a>
-            </div>
+      <h1>My Projects</h1>
+      <div class="projects-container">
+        <div class="projects-information">
+          <!-- Myntra Clone -->
+          <img src="Images/myntra-clone.png" alt="myntra-clone" />
+          <h2>Myntra Clone</h2>
+          <p>
+            A fully responsive Myntra website clone built using HTML and CSS.
+          </p>
+          <a href="https://mynstyle.netlify.app/" target="_blank"
+            >View Project</a
+          >
         </div>
+
+        <!-- Portfolio Website -->
+        <div class="projects-information">
+          <img src="Images/portfolio.png" alt="Portfolio Website" />
+          <h2>Portfolio Website</h2>
+          <p>
+            My personal portfolio website showcasing my projects and skills.
+          </p>
+          <a href="https://divyachaturvedi.netlify.app/" target="_blank"
+            >View Project</a
+          >
+        </div>
+      </div>
     </div>
-<!-- Contact Section -->
-<div id="contact" class="contact-section">
-    <h1>Contact Me</h1>
-    <p>Have a question or want to work together? Feel free to reach out!</p>
-    
-    <form class="contact-form" action="https://formspree.io/f/xqaevnbz" method="POST">
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+      <h1>Contact Me</h1>
+      <p>Have a question or want to work together? Feel free to reach out!</p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/xqaevnbz"
+        method="POST"
+      >
         <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required placeholder="Your Name">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Your Name"
+          />
         </div>
 
         <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="Your Email">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Your Email"
+          />
         </div>
 
         <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            required
+            placeholder="Write your message here..."
+          ></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-</div>
-      <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-content">
+      </form>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
         <h2>Let's Connect!</h2>
         <p>Made with ❤️ by Divya Chaturvedi</p>
         <div class="footer-links">
-            <a href="mailto:divyachatrvedi120@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/divyachaturvedi02/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/divya-chaturvedi120" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a
+            href="mailto:divyachatrvedi120@gmail.com"
+            target="_blank"
+            title="Email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/divyachaturvedi02/"
+            target="_blank"
+            title="LinkedIn"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/divya-chaturvedi120"
+            target="_blank"
+            title="GitHub"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
         <p>&copy; 2025 Divya Chaturvedi. All rights reserved.</p>
-    </div>
-            
-</footer> 
-</body>
+      </div>
+    </footer>
+  </body>
 </html>
