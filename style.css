@@ -323,68 +323,115 @@ html {
   }
 }
 
-/* Profiles Section */
+/* Coding Profiles Section */
 .profiles-section {
-  padding: 40px;
-  background-color: #1b263b;
+  padding: 40px 20px;
+  background-color: #0d1b2a;
   border-radius: 10px;
-  text-align: center;
-  width: 90%;
   max-width: 1000px;
-  margin: 20px auto;
+  margin: 30px auto;
+  color: #e0e1dd;
+  box-shadow: 0 0 15px rgba(0, 180, 216, 0.5);
+  text-align: center;
 }
 
 .profiles-section h1 {
+  font-size: 2em;
   color: #00b4d8;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .profiles-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 20px;
+  justify-items: center;
+  align-items: center;
 }
 
 .profile-card {
+  background-color: #1b263b;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #e0e1dd;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-decoration: none;
-  color: #e0e1dd;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 120px;
 }
 
 .profile-card i {
-  font-size: 3em;
-  margin-bottom: 8px;
-  transition: transform 0.3s ease;
+  font-size: 2.2em;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
 }
 
-/* Icon Colors */
-.profile-card:nth-child(1) i {
-  color: #ffa116;
-} /* LeetCode Orange */
-.profile-card:nth-child(2) i {
-  color: #0f9d58;
-} /* GeeksforGeeks Green */
-.profile-card:nth-child(3) i {
-  color: #f9a825;
-} /* Codolio Yellow */
-.profile-card:nth-child(4) i {
-  color: #171515;
-} /* GitHub Black */
-.profile-card:nth-child(5) i {
-  color: #0077b5;
-} /* LinkedIn Blue */
+/* Colorful icons */
+.profile-card .fa-code { color: #ff6b6b; }           /* LeetCode */
+.profile-card .fa-laptop-code { color: #4caf50; }    /* GeeksforGeeks */
+.profile-card .fa-terminal { color: #f9a825; }       /* Codolio */
+.profile-card .fa-github { color: #181717; }         /* GitHub */
+.profile-card .fa-linkedin { color: #0a66c2; }       /* LinkedIn */
 
 .profile-card span {
-  font-size: 0.9em;
+  font-size: 1em;
+  font-weight: 500;
+  margin-top: 5px;
 }
 
+/* Hover effect */
 .profile-card:hover {
-  transform: scale(1.1);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 180, 216, 0.5);
 }
+
+.profile-card:hover i {
+  transform: scale(1.2);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .profiles-container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+  .profile-card {
+    width: 100px;
+    padding: 15px;
+  }
+
+  .profile-card i {
+    font-size: 2em;
+  }
+
+  .profile-card span {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .profiles-container {
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 12px;
+  }
+
+  .profile-card {
+    width: 90px;
+    padding: 12px;
+  }
+
+  .profile-card i {
+    font-size: 1.8em;
+  }
+
+  .profile-card span {
+    font-size: 0.8em;
+  }
+}
+
 
 /* Projects Section */
 .projects-section {
@@ -622,4 +669,5 @@ textarea {
     font-size: 18px;
   }
 }
+
 
