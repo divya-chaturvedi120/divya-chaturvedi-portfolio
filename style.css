@@ -4,6 +4,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+#typing {
+  font-family: 'Great Vibes', cursive;
+  color: #f9ca24;
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px #ffdd75; /* subtle glow effect */
+}
+
 
 /* Global body */
 body {
@@ -431,3 +438,4 @@ footer {
     flex: 1 1 100%;
   }
 }
+
