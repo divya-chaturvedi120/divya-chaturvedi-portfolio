@@ -5,6 +5,41 @@
   box-sizing: border-box;
 }
 
+/* Global body */
+body {
+  font-family: "Poppins", sans-serif; /* Main content font */
+  color: #ffffff; /* Adjust as needed */
+  line-height: 1.6;
+}
+
+/* Headings and logo */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo,
+.logo-icon {
+  font-family: "Dancing Script", cursive; /* Cursive font for attention elements */
+  font-weight: 700;
+}
+
+/* Paragraphs, list items, links */
+p,
+li,
+a,
+span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+/* Optional: slightly bold for subheadings */
+h2,
+h3 {
+  font-weight: 600;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #e6e6e6;
@@ -26,83 +61,68 @@ body {
 }
 
 /* ------------------ Navbar ------------------ */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 8%;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
-  position: sticky;
+  padding: 12px 5%;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Logo */
 .logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  color: #f9ca24;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px #ffde59;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.logo-icon {
-  background: linear-gradient(135deg, #f9ca24, #f39c12);
-  padding: 8px 12px;
-  border-radius: 50%;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #000;
-  box-shadow: 0 0 12px rgba(249, 202, 36, 0.7);
+.logo:hover {
+  transform: scale(1.2) rotate(-5deg);
 }
 
+/* Navigation Links */
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
+  list-style: none;
 }
 
 .nav-links li a {
+  color: #fff;
   text-decoration: none;
-  color: #e6e6e6;
-  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: 0.3s;
 }
 
 .nav-links li a:hover {
   color: #f9ca24;
+  transform: scale(1.1);
 }
 
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
+/* Mobile: Hide navbar links, show only logo */
+@media screen and (max-width: 768px) {
   .nav-links {
     display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 8%;
-    background: rgba(0, 0, 0, 0.95);
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
   }
 
-  .nav-links.active {
-    display: flex;
+  .navbar {
+    justify-content: center; /* center logo */
   }
 
-  .hamburger {
-    display: block;
+  .logo {
+    font-size: 2.2rem;
   }
 }
 
