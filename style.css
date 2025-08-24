@@ -4,12 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-#typing {
-  font-family: 'Great Vibes', cursive;
-  color: #f9ca24;
-  font-size: 3rem;
-  text-shadow: 2px 2px 8px #ffdd75; /* subtle glow effect */
-}
+
 
 
 /* Global body */
@@ -130,6 +125,33 @@ body {
 
   .logo {
     font-size: 2.2rem;
+  }
+}
+
+/* Header name */
+
+.name-text {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  color: #f9b233;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* smooth scaling */
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .name-text {
+    font-size: 2rem; /* smaller font on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .name-text {
+    font-size: 1.5rem; /* smaller font on phones */
+    letter-spacing: 1px; /* adjust spacing */
   }
 }
 
@@ -438,4 +460,5 @@ footer {
     flex: 1 1 100%;
   }
 }
+
 
